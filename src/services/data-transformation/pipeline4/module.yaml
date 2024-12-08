@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=../../../../.fluence/schemas/module.json
+
+# Defines Marine Module. You can use `fluence module new` command to generate a template for new module
+
+# Documentation for CLI v0.21.0: https://github.com/fluencelabs/cli/tree/fluence-cli-v0.21.0/cli/docs/configs/module.md
+
+version: 1
+
+type: rust
+
+name: pipeline4
+

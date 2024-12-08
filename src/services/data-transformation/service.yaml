@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=../../../.fluence/schemas/service.json
+
+# Defines a [Marine service](https://fluence.dev/docs/build/concepts/#services), most importantly the modules that the service consists of. You can use `fluence service new` command to generate a template for new service
+
+# Documentation for CLI v0.21.0: https://github.com/fluencelabs/cli/tree/fluence-cli-v0.21.0/cli/docs/configs/service.md
+
+version: 0
+
+name: data-transformation
+
+modules:
+  facade:
+    get: data-transformation

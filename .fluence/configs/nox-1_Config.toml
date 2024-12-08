@@ -1,0 +1,32 @@
+aquavm_pool_size = 2
+tcp_port = 976
+websocket_port = 998
+http_port = 917
+tokio_metrics_enabled = true
+metrics_enabled = true
+metrics_timer_resolution = "1 minute"
+
+[system_services]
+enable = [ "aqua-ipfs", "decider" ]
+
+  [system_services.decider]
+  decider_period_sec = 30
+  worker_ipfs_multiaddr = "/dns4/ipfs/tcp/5001"
+
+  [system_services.aqua_ipfs]
+  external_api_multiaddr = "/ip4/127.0.0.1/tcp/5001"
+  local_api_multiaddr = "/dns4/ipfs/tcp/5001"
+  ipfs_binary_path = "/usr/bin/ipfs"
+
+[chain_config]
+http_endpoint = "http://chain-rpc:8545"
+diamond_contract_address = "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1"
+network_id = 31_337
+wallet_key = "0xf83f16eb7104f150aa7d2a9afcbb708278327dd9aa05eeed3f1233b3358d054c"
+default_priority_fee = 0
+
+[effectors.curl]
+wasm_cid = "bafybeicorj3sl6fhqpuubmt5r2n7plkjkmto6jxqckgte2624dj5zvzufm"
+
+  [effectors.curl.allowed_binaries]
+  curl = "/usr/bin/curl"
